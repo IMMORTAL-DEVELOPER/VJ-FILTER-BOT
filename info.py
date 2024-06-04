@@ -52,7 +52,7 @@ FILE_STORE_CHANNEL = [int(ch) for ch in (environ.get('FILE_STORE_CHANNEL', '-100
 DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '0').split()]
 
 # MongoDB information
-DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://filmaxstrem:akshay@filmaxstrem.kf43yof.mongodb.net/?retryWrites=true&w=majority&appName=filmaxstrem")
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://cluster0:akshay@filmaxstrem.kf43yof.mongodb.net/?retryWrites=true&w=majority&appName=cluster0")
 DATABASE_NAME = environ.get('DATABASE_NAME', "filmaxstrem")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'techvjcollection')
 
@@ -139,7 +139,7 @@ if 'DYNO' in environ:
     ON_HEROKU = True
 else:
     ON_HEROKU = False
-URL = environ.get("URL", "filmaxstrem-684b1da4bd4b.herokuapp.com")
+URL = environ.get("URL", "https://filmaxstrem-684b1da4bd4b.herokuapp.com/")
 
 
 # Rename Info : If True Then Bot Rename File Else Not
